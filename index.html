@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <script>
+      function search() {
+        var query = document.getElementById("search-box").value.toLowerCase();
+        var items = document.getElementsByClassName("item");
+
+        for (var i = 0; i < items.length; i++) {
+          var title = items[i].getElementsByClassName("title")[0].textContent.toLowerCase();
+          var content = items[i].getElementsByClassName("content")[0].textContent.toLowerCase();
+          if (title.includes(query) || content.includes(query)) {
+            items[i].style.display = "block";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <form>
+        <input type="text" id="search-box" placeholder="Search...">
+        <button type="button" onclick="search()">Search</button>
+      </form>
+    </header>
+    <main>
+      <div class="item">
+        <h2 class="title">Item 1</h2>
+        <p class="content">This is the content of item 1.</p>
+      </div>
+      <div class="item">
+        <h2 class="title">Item 2</h2>
+        <p class="content">This is the content of item 2.</p>
+      </div>
+      <div class="item">
+        <h2 class="title">Item 3</h2>
+        <p class="content">This is the content of item 3.</p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Website</p>
+    </footer>
+  </body>
+</html>
