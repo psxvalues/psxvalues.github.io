@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PSX Values: Dog</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="menu">
+      <a href="index.html">Home</a>
+    </div>
+    <div style="background-color: #000066;">
+      <div class="info">
+        <img src="dog.png" alt="dog">
+        <div>
+          <p class="info-text">Normal: 50,000</p>
+          <p class="info-text gold-text">Golden: Soon</p>
+          <p class="info-text rainbow-text">Rainbow: Soon</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
