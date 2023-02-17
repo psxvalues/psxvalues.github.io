@@ -29,6 +29,19 @@
       .menu a:first-child {
         margin-right: auto;
       }
+      .info {
+        display: flex;
+        align-items: center;
+      }
+      .info img {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+      }
+      .info-text {
+        color: white;
+        font-size: 18px;
+      }
     </style>
   </head>
   <body>
@@ -36,8 +49,14 @@
       <a href="index.html">Home</a>
     </div>
     <div style="background-color: #000066;">
-      <p><span class="red-text">Normal: 10,000</span></p>
-      <img src="dog.png" alt="dog">
+      <div class="info">
+        <img src="dog.png" alt="dog">
+        <div>
+          <p class="info-text">Normal: 50,000</p>
+          <p class="info-text">Golden: Soon</p>
+          <p class="info-text">Rainbow: Soon</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
