@@ -1,22 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>PSX Values: Dog</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="menu">
-      <a href="index.html">Home</a>
-    </div>
-    <div style="background-color: #000066;">
-      <div class="info">
-        <img src="dog.png" alt="dog">
-        <div>
-          <p class="info-text">Normal: 50,000</p>
-          <p class="info-text gold-text">Golden: Soon</p>
-          <p class="info-text rainbow-text">Rainbow: Soon</p>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+.red-text {
+  color: white;
+  font-weight: bold;
+}
+
+.gold-text {
+  color: gold;
+  font-weight: bold;
+}
+
+.rainbow-text {
+  background: -webkit-linear-gradient(#f22, #f2f, #22f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+body {
+  background-color: #000066;
+}
+
+.menu {
+  background-color: #000066;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.menu a:first-child {
+  margin-right: auto;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  width: 150px; /* adjust the width to make the image larger */
+  height: auto;
+  margin-right: 20px;
+}
+
+.info-text {
+  color: white;
+  font-size: 24px; /* adjust the font size to make the text larger */
+}
