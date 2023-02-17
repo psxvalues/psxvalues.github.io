@@ -1,0 +1,83 @@
+:root {
+  --primary-color: #000066;
+  --secondary-color: gold;
+  --highlight-color: -webkit-linear-gradient(#f22, #f2f, #22f);
+  --font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-size: var(--font-size);
+}
+
+header {
+  background-color: var(--primary-color);
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.dog-info {
+  display: flex;
+  align-items: center;
+}
+
+.dog-info img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.text-info {
+  color: white;
+  font-size: 18px;
+}
+
+.info-text {
+  font-weight: bold;
+}
+
+.gold-text {
+  color: var(--secondary-color);
+}
+
+.rainbow-text {
+  background: var(--highlight-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
