@@ -7,11 +7,23 @@
         color: white;
         font-weight: bold;
       }
-    </style>
-    <style>
+
+      .gold-text {
+        color: gold;
+        font-weight: bold;
+      }
+
+      .rainbow-text {
+        background: -webkit-linear-gradient(#f22, #f2f, #22f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+      
       body {
         background-color: #000066;
       }
+
       .menu {
         background-color: #000066;
         display: flex;
@@ -20,24 +32,29 @@
         height: 50px;
         padding: 0 20px;
       }
+
       .menu a {
         color: white;
         text-decoration: none;
         margin-right: 20px;
         font-size: 20px;
       }
+
       .menu a:first-child {
         margin-right: auto;
       }
+
       .info {
         display: flex;
         align-items: center;
       }
+
       .info img {
         width: 100px;
         height: auto;
         margin-right: 20px;
       }
+
       .info-text {
         color: white;
         font-size: 18px;
@@ -53,8 +70,8 @@
         <img src="dog.png" alt="dog">
         <div>
           <p class="info-text">Normal: 50,000</p>
-          <p class="info-text">Golden: Soon</p>
-          <p class="info-text">Rainbow: Soon</p>
+          <p class="info-text gold-text">Golden: Soon</p>
+          <p class="info-text rainbow-text">Rainbow: Soon</p>
         </div>
       </div>
     </div>
