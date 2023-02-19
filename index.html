@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <title>PSX Values</title>
     <link rel="icon" type="image/png" href="Banana.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PSX Values</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h2>Search for a pet</h2>
-    <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search for pets...">
-    <ul id="myUL">
-      <li><a href="dog"><img src="dog.png" alt="Dog"><span>Dog</span></a></li>
-      <li><a href="banana"><img src="Banana.png" alt="Banana"><span>Banana</span></a></li>
-      <li><a href="titanic_jolly_cat"><img src="titanic_jolly_cat.png" alt="Titanic Jolly Cat"><span>Titanic Jolly Cat</span></a></li>
-      <li><a href="Titanic_Balloon_Monkey"><img src="Titanic_Balloon_Monkey.png" alt="Titanic Balloon Monkey"><span>Titanic Balloon Monkey</span></a></li>
-      <li><a href="titanic_hubert"><img src="titanic_hubert.png" alt="Titanic Hubert"><span>Titanic Hubert</span></a></li>
-      <li><a href="huge_meebo"><img src="huge_meebo.png" alt="Huge Meebo"><span>Huge Meebo</span></a></li>
-    </ul>
+    <!-- Main header -->
+    <header>
+      <h1>PSX Values</h1>
+    </header>
+
+    <!-- Search input and list of pets -->
+    <main>
+      <h2>Search for a pet</h2>
+      <input type="text" id="myInput" placeholder="Search for pets...">
+      <ul id="myUL">
+        <li><a href="dog"><img src="dog.png" alt="Dog"><span>Dog</span></a></li>
+        <li><a href="banana"><img src="Banana.png" alt="Banana"><span>Banana</span></a></li>
+        <li><a href="titanic_jolly_cat"><img src="titanic_jolly_cat.png" alt="Titanic Jolly Cat"><span>Titanic Jolly Cat</span></a></li>
+        <li><a href="Titanic_Balloon_Monkey"><img src="Titanic_Balloon_Monkey.png" alt="Titanic Balloon Monkey"><span>Titanic Balloon Monkey</span></a></li>
+        <li><a href="titanic_hubert"><img src="titanic_hubert.png" alt="Titanic Hubert"><span>Titanic Hubert</span></a></li>
+        <li><a href="huge_meebo"><img src="huge_meebo.png" alt="Huge Meebo"><span>Huge Meebo</span></a></li>
+      </ul>
+    </main>
+
+    <!-- External JavaScript file -->
     <script src="filter.js"></script>
   </body>
 </html>
