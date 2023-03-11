@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <h1 id="countdown"></h1>
+
+    <script>
+      function updateCountdown() {
+        const now = new Date();
+        const target = new Date();
+        target.setHours(17, 0, 0, 0); // 5:00 PM UK time
+
+        let remainingTime = target.getTime() - now.getTime();
+
+        if (remainingTime <= 0) {
+          // If the target time has already passed, reset the countdown
+          remainingTime += 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+        }
+
+        const hours = Math.floor(remainingTime / (60 * 60 * 1000));
+        remainingTime -= hours * 60 * 60 * 1000;
+
+        const minutes = Math.floor(remainingTime / (60 * 1000));
+        remainingTime -= minutes * 60 * 1000;
+
+        const seconds = Math.floor(remainingTime / 1000);
+
+        const countdownEl = document.getElementById("countdown");
+        countdownEl.textContent = `Countdown: ${hours}h ${minutes}m ${seconds}s`;
+
+        setTimeout(updateCountdown, 1000);
+      }
+
+      updateCountdown();
+    </script>
+  </body>
+</html>
