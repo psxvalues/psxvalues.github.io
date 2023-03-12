@@ -1,69 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" type="image/png" href="Banana.png">
-    <title>Psx Values: Countdown Timer</title>
-  </head>
- <style>
-      body {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png');
-      }
-
-      #countdown {
-        margin: 20px;
-        font-size: 24px;
-      }
-
-      #remove-bg-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px;
-        background-color: white;
-        border: 1px solid black;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 id="countdown"></h1>
-
-    <button id="remove-bg-btn">Remove Background</button>
-
-    <script>
-      const bgImage = document.body.style.backgroundImage;
-
-      function updateCountdown() {
-        const now = new Date();
-        const target = new Date();
-        target.setHours(17, 0, 0, 0); // 5:00 PM UK time
-
-        let remainingTime = target.getTime() - now.getTime();
-
-        if (remainingTime <= 0) {
-          // If the target time has already passed, reset the countdown
-          remainingTime += 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-        }
-
-        const hours = Math.floor(remainingTime / (60 * 60 * 1000));
-        remainingTime -= hours * 60 * 60 * 1000;
-
-        const minutes = Math.floor(remainingTime / (60 * 1000));
-        remainingTime -= minutes * 60 * 1000;
-
-        const seconds = Math.floor(remainingTime / 1000);
-
-        const countdownEl = document.getElementById("countdown");
-        countdownEl.textContent = `Countdown: ${hours}h ${minutes}m ${seconds}s`;
-
-        setTimeout(updateCountdown, 1000);
-      }
-
-      updateCountdown();
-
-      document.getElementById("remove-bg-btn").addEventListener("click", () => {
-        document.body.style.backgroundImage = "";
-      });
-    </script>
-  </body>
+<head>
+	<title>PSX Values: Countdown</title>
+	<script>
+		function countdown() {
+			var now = new Date();
+			var target = new Date();
+			var target_day = 6; // Saturday
+			var target_hour = 17; // 5:00 PM
+			var days_until_target = (target_day - now.getDay() + 7) % 7;
+			target.setDate(now.getDate() + days_until_target);
+			target.setHours(target_hour, 0, 0, 0);
+			var remaining = target - now;
+			var seconds = Math.floor(remaining / 1000) % 60;
+			var minutes = Math.floor(remaining / (1000 * 60)) % 60;
+			var hours = Math.floor(remaining / (1000 * 60 * 60)) % 24;
+			var days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+			document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+			setTimeout(countdown, 1000);
+		}
+	</script>
+</head>
+<body onload="countdown()">
+	<div id="countdown"></div>
+</body>
 </html>
